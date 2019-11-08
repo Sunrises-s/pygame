@@ -93,7 +93,7 @@ class Menu(object):
                 self.father.set_screen.init()
             elif self.about.click(pos):
                 self.alert_window = Window(self.father.screen, [self.father.size[0]//2, self.father.size[1]//2], window_mod='alert2', texts=['确定'], alert_mod='', rotate_speed=0)
-                self.alert_window.load_text(['作者:yunyuyuan', '单击数字开周围块', '左ctrl调速'], [[self.father.size[0]//2-150, self.father.size[1]//2-100], [self.father.size[0]//2-150, self.father.size[1]//2-50], [self.father.size[0]//2-150, self.father.size[1]//2]], text_info=['kaiti', 30, 1])
+                self.alert_window.load_text(['作者:yunyuyuan', '单击数字开周围块', '左ctrl调速'], [[self.father.size[0]//2-150, self.father.size[1]//2-100], [self.father.size[0]//2-150, self.father.size[1]//2-50], [self.father.size[0]//2-150, self.father.size[1]//2]], text_info=['fangsong', 30, 1])
             elif self.exit.click(pos):
                 pygame.display.quit()
                 exit()

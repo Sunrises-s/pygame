@@ -39,7 +39,7 @@ class Game(object):
             self.font = pygame.font.SysFont('kaiti', 25, True)
             multiple = 1
             font_pos_alter = [30, 20]
-            self.num_font = pygame.font.SysFont('微软雅黑', 40)
+            self.num_font = pygame.font.SysFont('fangsong', 25, True)
             if self.level == 'easy':
                 self.box_size = [88, 88]
                 self.border_size = [792, 792]
@@ -56,7 +56,7 @@ class Game(object):
             self.font = pygame.font.SysFont('kaiti', 20, True)
             multiple = 0.7
             font_pos_alter = [20, 10]
-            self.num_font = pygame.font.SysFont('微软雅黑', 26)
+            self.num_font = pygame.font.SysFont('fangsong', 18, True)
             if self.level == 'easy':
                 self.box_size = [70, 70]
                 self.border_size = [630, 630]

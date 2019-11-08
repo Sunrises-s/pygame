@@ -366,26 +366,29 @@ class Plan(object):
             # 第一种方法,圆形
             if do_shut == 1:
                 for x in range(21):
-                    angle = math.pi / 10
-                    copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
-                    normal_vec = Vec2d(math.cos(x*angle), math.sin(x*angle)).normalized()
-                    self.enemy_bullets.append([copy_pos, normal_vec])
+                    if self.have_boss == 1:
+                        angle = math.pi / 10
+                        copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
+                        normal_vec = Vec2d(math.cos(x*angle), math.sin(x*angle)).normalized()
+                        self.enemy_bullets.append([copy_pos, normal_vec])
             # 第二种方法，螺旋
             elif do_shut == 2:
                 for x in range(-10, 11):
-                    angle = math.pi / 10
-                    copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
-                    normal_vec = Vec2d(math.cos(x * angle * random.choice([-1, 1])), math.sin(x * angle * random.choice([-1, 1]))).normalized()
-                    self.enemy_bullets.append([copy_pos, normal_vec])
-                    sleep(0.05)
+                    if self.have_boss == 1:
+                        angle = math.pi / 10
+                        copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
+                        normal_vec = Vec2d(math.cos(x * angle * random.choice([-1, 1])), math.sin(x * angle * random.choice([-1, 1]))).normalized()
+                        self.enemy_bullets.append([copy_pos, normal_vec])
+                        sleep(0.05)
             # 第三种方法，来回
             elif do_shut == 3:
                 for x in range(-10, 11):
-                    angle = math.pi / 10
-                    copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
-                    normal_vec = Vec2d(math.cos(x * angle * random.choice([-1, 1])), abs(math.sin(x * angle) * random.choice([-1, 1]))).normalized()
-                    self.enemy_bullets.append([copy_pos, normal_vec])
-                    sleep(0.1)
+                    if self.have_boss == 1:
+                        angle = math.pi / 10
+                        copy_pos = copy.deepcopy([self.boss_pos[0] + 140, self.boss_pos[1] + 100])
+                        normal_vec = Vec2d(math.cos(x * angle * random.choice([-1, 1])), abs(math.sin(x * angle) * random.choice([-1, 1]))).normalized()
+                        self.enemy_bullets.append([copy_pos, normal_vec])
+                        sleep(0.1)
         except ValueError:
             pass
 

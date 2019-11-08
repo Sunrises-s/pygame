@@ -8,7 +8,7 @@ pygame.init()
 class Record(object):
     def __init__(self, father):
         self.father = father
-        self.font = pygame.font.SysFont('kaiti', 40, True)
+        self.font = pygame.font.SysFont('fangsong', 40, True)
         self.lvl_1_source = pygame.image.load('images/pen.png').convert_alpha()
         self.lvl_2_source = pygame.image.load('images/pen.png').convert_alpha()
         self.lvl_3_source = pygame.image.load('images/pen.png').convert_alpha()
